@@ -24,6 +24,4 @@ extension Person: Equatable {
     static func == (lhs: Person, rhs: Person) -> Bool {
         lhs.id == rhs.id
     }
-   
-    
 }
