@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="1727.4809160305342" y="-80.281690140845072"/>
         </scene>
-        <!--View Controller-->
+        <!--Person Detail View Controller-->
         <scene sceneID="v6Q-N5-cva">
             <objects>
-                <viewController id="ryQ-9z-nvz" sceneMemberID="viewController">
+                <viewController id="ryQ-9z-nvz" customClass="PersonDetailViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g9g-Ee-WNn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,8 +171,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Iae-dH-tIV">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="pJa-S8-kzy"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="pJa-S8-kzy">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="ryQ-9z-nvz" id="sfm-DW-hDL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="personAddressTextField" destination="TQE-yK-zYJ" id="jzx-Pq-AHS"/>
+                        <outlet property="personNameTextField" destination="EkN-Mr-1aK" id="4Xc-Xb-sgG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AF1-lf-eqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
