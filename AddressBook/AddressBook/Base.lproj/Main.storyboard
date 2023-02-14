@@ -141,6 +141,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favoriteButton" destination="jdJ-IR-UVM" id="ZZS-uu-sOt"/>
+                                    <outlet property="personNameLabel" destination="NTD-xw-rNF" id="UpY-EN-cit"/>
                                     <segue destination="ryQ-9z-nvz" kind="show" identifier="toPersonDetail" id="bi3-96-262"/>
                                 </connections>
                             </tableViewCell>

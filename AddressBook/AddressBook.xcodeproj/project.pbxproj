@@ -51,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239351F7299C4EC8008A1C1E /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				239351F5299C4347008A1C1E /* PersonTableViewCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		23E6D35A299ADECF00A4EA9F = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +123,7 @@
 				23E6D388299B002B00A4EA9F /* GroupsTableViewController.swift */,
 				23E6D38C299B11FB00A4EA9F /* PersonTableViewController.swift */,
 				23E6D38E299B228E00A4EA9F /* PersonDetailViewController.swift */,
-				239351F5299C4347008A1C1E /* PersonTableViewCell.swift */,
+				239351F7299C4EC8008A1C1E /* Custom Cell */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
