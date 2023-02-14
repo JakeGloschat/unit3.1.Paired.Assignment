@@ -18,6 +18,7 @@
 		23E6D384299AF5D500A4EA9F /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6D383299AF5D500A4EA9F /* GroupController.swift */; };
 		23E6D389299B002B00A4EA9F /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6D388299B002B00A4EA9F /* GroupsTableViewController.swift */; };
 		23E6D38D299B11FB00A4EA9F /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6D38C299B11FB00A4EA9F /* PersonTableViewController.swift */; };
+		23E6D38F299B228E00A4EA9F /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6D38E299B228E00A4EA9F /* PersonDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		23E6D383299AF5D500A4EA9F /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
 		23E6D388299B002B00A4EA9F /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
 		23E6D38C299B11FB00A4EA9F /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
+		23E6D38E299B228E00A4EA9F /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				23E6D388299B002B00A4EA9F /* GroupsTableViewController.swift */,
 				23E6D38C299B11FB00A4EA9F /* PersonTableViewController.swift */,
+				23E6D38E299B228E00A4EA9F /* PersonDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				23E6D367299ADECF00A4EA9F /* AppDelegate.swift in Sources */,
 				23E6D37D299AE65E00A4EA9F /* Person.swift in Sources */,
 				23E6D369299ADECF00A4EA9F /* SceneDelegate.swift in Sources */,
+				23E6D38F299B228E00A4EA9F /* PersonDetailViewController.swift in Sources */,
 				23E6D389299B002B00A4EA9F /* GroupsTableViewController.swift in Sources */,
 				23E6D380299AE83200A4EA9F /* Group.swift in Sources */,
 				23E6D384299AF5D500A4EA9F /* GroupController.swift in Sources */,

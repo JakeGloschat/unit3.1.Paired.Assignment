@@ -11,13 +11,13 @@
         <!--Groups-->
         <scene sceneID="hRI-Yu-kBS">
             <objects>
-                <tableViewController id="7Lx-Fb-DPH" sceneMemberID="viewController">
+                <tableViewController id="7Lx-Fb-DPH" customClass="GroupsTableViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="muh-ox-D5e">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cW2-g7-ePi" detailTextLabel="Hac-E1-1DF" style="IBUITableViewCellStyleValue1" id="sYU-61-r6U">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="groupCell" textLabel="cW2-g7-ePi" detailTextLabel="Hac-E1-1DF" style="IBUITableViewCellStyleValue1" id="sYU-61-r6U">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sYU-61-r6U" id="upw-qn-bL1">
@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7bK-V0-IxM" kind="show" id="CzP-v1-wpb"/>
+                                    <segue destination="7bK-V0-IxM" kind="show" identifier="toPersonTableViewController" id="CzP-v1-wpb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,14 +54,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cFv-bz-NhN">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <action selector="addButtonTapped:" destination="rK0-sO-XsE" id="kdj-hc-oxm"/>
-                                <segue destination="7bK-V0-IxM" kind="show" id="3O4-bU-nT0"/>
+                                <action selector="addButtonTapped:" destination="7Lx-Fb-DPH" id="Mrm-kR-AKO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAM-oE-6Eb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="rK0-sO-XsE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="975" y="-80"/>
         </scene>
@@ -92,7 +90,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" textLabel="HPM-gI-ORr" rowHeight="100" style="IBUITableViewCellStyleDefault" id="eJt-q4-UsR" customClass="PersonTableViewCell" customModule="AddressBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" textLabel="HPM-gI-ORr" detailTextLabel="GHw-EE-biZ" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="eJt-q4-UsR">
                                 <rect key="frame" x="0.0" y="112" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eJt-q4-UsR" id="5z2-HA-G8e" customClass="PersonTableViewCell" customModule="AddressBook" customModuleProvider="target">
@@ -100,7 +98,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HPM-gI-ORr">
-                                            <rect key="frame" x="20" y="0.0" width="353" height="100"/>
+                                            <rect key="frame" x="20" y="34" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GHw-EE-biZ">
+                                            <rect key="frame" x="19.999999999999996" y="50.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -109,7 +114,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="personNameLabel" destination="HPM-gI-ORr" id="0Au-Qg-ExB"/>
                                     <segue destination="ryQ-9z-nvz" kind="show" id="bi3-96-262"/>
                                 </connections>
                             </tableViewCell>
@@ -184,9 +188,6 @@
             <point key="canvasLocation" x="258.77862595419845" y="-79.577464788732399"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="CzP-v1-wpb"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
