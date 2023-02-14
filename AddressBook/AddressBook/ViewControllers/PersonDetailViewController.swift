@@ -8,32 +8,15 @@
 import UIKit
 
 class PersonDetailViewController: UIViewController {
-
-    // MARK: - Outlets
     
-    
-    // MARK: - properties
-    
-    //: DidLoad
-    
-    
-    // MARK: - Lifecycle
+    // MARK: - Properties
+    var personObjectReceiver: Person?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-    
-    
-    // MARK: - actions
-    
-    //: Save Button
-    
-
-    // MARK: - Helper Functions
-    
-    
-    //: Update views
-    
+        
+        
     
 } // End of Class

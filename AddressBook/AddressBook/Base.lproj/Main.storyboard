@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="975" y="-80"/>
         </scene>
-        <!--Groups Table View Controller-->
+        <!--Person Table View Controller-->
         <scene sceneID="Doz-qE-om5">
             <objects>
-                <tableViewController id="7bK-V0-IxM" customClass="GroupsTableViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7bK-V0-IxM" customClass="PersonTableViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ibQ-pp-imn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" textLabel="HPM-gI-ORr" detailTextLabel="GHw-EE-biZ" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="eJt-q4-UsR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" textLabel="HPM-gI-ORr" detailTextLabel="GHw-EE-biZ" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="eJt-q4-UsR">
                                 <rect key="frame" x="0.0" y="112" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eJt-q4-UsR" id="5z2-HA-G8e" customClass="PersonTableViewCell" customModule="AddressBook" customModuleProvider="target">
@@ -114,7 +114,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ryQ-9z-nvz" kind="show" id="bi3-96-262"/>
+                                    <segue destination="ryQ-9z-nvz" kind="show" identifier="toPersonDetail" id="bi3-96-262"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -123,7 +123,16 @@
                             <outlet property="delegate" destination="7bK-V0-IxM" id="fZv-JZ-9f8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="SQ0-Ay-Hkd"/>
+                    <navigationItem key="navigationItem" id="SQ0-Ay-Hkd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="bxk-s0-9c8">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="7bK-V0-IxM" id="1V8-W3-DU4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="groupNameTextField" destination="48V-kj-Ae2" id="Tx1-zR-sZL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEd-Cs-MVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
