@@ -13,10 +13,11 @@ class PersonDetailViewController: UIViewController {
     
     @IBOutlet weak var personNameTextField: UITextField!
     @IBOutlet weak var personAddressTextField: UITextField!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     
     // MARK: - Properties
-    var personObjectReceiver: Person?
+    var person: Person?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +26,20 @@ class PersonDetailViewController: UIViewController {
     // MARK: - helper function
     
     func updateViews() {
-        guard let personObjectReceiver = personObjectReceiver else { return }
+        guard let personObjectReceiver = person else { return }
         personNameTextField.text = personObjectReceiver.name
         personAddressTextField.text = personObjectReceiver.address
+    }
+    func updateFavoriteButton() {
+        guard let personObjectReceiver = person else { return }
+        let favoriteImageName = personObjectReceiver.isFavorite ? "star.fill" : "star"
+        let favoriteImage = UIImage(systemName: favoriteImageName)
+        favoriteButton.setImage(favoriteImage, for: .normal)
     }
     // MARK: - Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let person = personObjectReceiver,
+        guard let person = person,
               let name = personNameTextField.text,
               let address = personAddressTextField.text else { return }
         PersonController.updatePerson(newName: name, newAddress: address, newPerson: person)
@@ -40,6 +47,10 @@ class PersonDetailViewController: UIViewController {
         
     }
     
-    
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        guard let person = person else { return }
+        PersonController.toggleFavorite(person: person)
+        updateViews()
+    }
     
 } // End of Class

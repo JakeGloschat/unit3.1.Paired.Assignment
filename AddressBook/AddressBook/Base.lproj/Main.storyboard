@@ -201,10 +201,13 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" style="plain" id="ylG-5C-Br1">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Hhs-Tw-vhG">
-                                    <rect key="frame" x="245.33333333333337" y="5" width="87" height="34.333333333333336"/>
+                                    <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="favoriteButtonTapped:" destination="ryQ-9z-nvz" eventType="touchUpInside" id="emZ-7a-P9p"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" systemItem="save" id="pJa-S8-kzy">
@@ -215,6 +218,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="favoriteButton" destination="Hhs-Tw-vhG" id="JJf-ey-kyN"/>
                         <outlet property="personAddressTextField" destination="TQE-yK-zYJ" id="jzx-Pq-AHS"/>
                         <outlet property="personNameTextField" destination="EkN-Mr-1aK" id="4Xc-Xb-sgG"/>
                     </connections>

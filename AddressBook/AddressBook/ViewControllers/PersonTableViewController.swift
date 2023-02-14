@@ -100,7 +100,7 @@ class PersonTableViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 if let destination = segue.destination as? PersonDetailViewController {
                     let person = group?.people[indexPath.row]
-                    destination.personObjectReceiver = person
+                    destination.person = person
                     
                 }
             }
