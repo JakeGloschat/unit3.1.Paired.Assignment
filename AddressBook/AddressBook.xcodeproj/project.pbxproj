@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239351F6299C4347008A1C1E /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239351F5299C4347008A1C1E /* PersonTableViewCell.swift */; };
 		23E6D367299ADECF00A4EA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6D366299ADECF00A4EA9F /* AppDelegate.swift */; };
 		23E6D369299ADECF00A4EA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6D368299ADECF00A4EA9F /* SceneDelegate.swift */; };
 		23E6D36E299ADECF00A4EA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E6D36C299ADECF00A4EA9F /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		239351F5299C4347008A1C1E /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		23E6D363299ADECF00A4EA9F /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E6D366299ADECF00A4EA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E6D368299ADECF00A4EA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				23E6D388299B002B00A4EA9F /* GroupsTableViewController.swift */,
 				23E6D38C299B11FB00A4EA9F /* PersonTableViewController.swift */,
 				23E6D38E299B228E00A4EA9F /* PersonDetailViewController.swift */,
+				239351F5299C4347008A1C1E /* PersonTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				23E6D38F299B228E00A4EA9F /* PersonDetailViewController.swift in Sources */,
 				23E6D389299B002B00A4EA9F /* GroupsTableViewController.swift in Sources */,
 				23E6D380299AE83200A4EA9F /* Group.swift in Sources */,
+				239351F6299C4347008A1C1E /* PersonTableViewCell.swift in Sources */,
 				23E6D384299AF5D500A4EA9F /* GroupController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
