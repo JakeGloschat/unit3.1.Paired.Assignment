@@ -7,8 +7,12 @@
 
 import UIKit
 
-class PersonTableViewCell: UITableViewCell {
+protocol PersonTableViewCellDelegate: AnyObject {
+    func toggleFavoriteButtonTapped(cell: PersonTableViewCell)
+}
 
+class PersonTableViewCell: UITableViewCell {
+    
     // MARK: - Properties
     var person: Person? {
         didSet {
@@ -17,16 +21,18 @@ class PersonTableViewCell: UITableViewCell {
     }
     
     
-// MARK: - Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var personNameLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    weak var delegate: PersonTableViewCellDelegate?
     // MARK: - Helper Functions
     
     func updateViews () {
         guard let person = person else { return }
         personNameLabel.text = person.name
+        updateFavoriteButton()
         
     }
     func updateFavoriteButton() {
@@ -36,5 +42,10 @@ class PersonTableViewCell: UITableViewCell {
         favoriteButton.setImage(favoriteImage, for: .normal)
     }
     
+    // MARK: - Actions
+    
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        delegate?.toggleFavoriteButtonTapped(cell: self)
+    }
 
 } // End of Class
